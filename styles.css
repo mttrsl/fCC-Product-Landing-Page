@@ -6,7 +6,7 @@
 }
 
 body {
-  padding-top: 80px; /* This value should match the navbar's height */
+  padding-top: 80px;
 }
 
 nav {
@@ -19,7 +19,7 @@ nav {
   background-color: #e5e4e2;
   z-index: 1;
   padding: 10px;
-  height: 80px; /* Set a fixed height */
+  height: 80px;
 }
 
 nav > ul {
@@ -56,7 +56,7 @@ nav ul li > a:active {
 }
 
 .Overview-content {
-  padding-top: 80px; /* Adjust to match navbar height */
+  padding-top: 80px;
   padding-left: 100px;
   padding-right: 100px;
   background-color: #d3d3d3;
@@ -75,14 +75,14 @@ nav ul li > a:active {
 
 .Overview-content > .overview-description {
   display: flex;
-  flex-direction: row; /* Aligns content horizontally */
-  align-items: center; /* Vertically center the content */
-  justify-content: flex-start; /* Aligns content to the left */
-  gap: 20px; /* Space between the text and the image */
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
 #product-image1 {
-  max-width: 50%; /* Ensures the image doesn't get too big */
+  max-width: 50%;
   height: auto;
 }
 
@@ -90,9 +90,9 @@ iframe {
   max-width: 100%;
   height: 315px;
   border: none;
-  display: block; /* Makes the iframe a block-level element */
-  margin-left: auto; /* Centers it horizontally */
-  margin-right: auto; /* Centers it horizontally */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
 }
 
@@ -301,4 +301,87 @@ blockquote > figcaption {
 
 .footer ul li > a:hover {
   color: #818181;
+}
+
+@media (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  nav > ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .Overview-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: auto;
+  }
+
+  .Overview-content > .overview-description {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Features {
+    padding: 20px 15px;
+    min-height: auto;
+  }
+
+  .button1,
+  .button2 {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .email-input {
+    width: 100%;
+  }
+
+  .footer {
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    padding: 20px;
+    height: 70px;
+  }
+
+  nav > ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  .Overview-content {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .Overview-content > .overview-description {
+    flex-direction: row;
+  }
+
+  .Features {
+    padding: 40px 30px;
+    min-height: 400px;
+  }
+
+  .button1,
+  .button2 {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+
+  .email-input {
+    width: 75%;
+  }
 }
